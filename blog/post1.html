@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript新特性探索 - 我的个人博客</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="nav-logo">我的博客</h1>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">首页</a></li>
+                    <li class="nav-item"><a href="posts.html" class="nav-link">文章</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">关于</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <article class="post-page">
+            <h1>JavaScript新特性探索</h1>
+            <div class="post-meta-full">
+                <span>发布于 2023-06-15</span>
+                <span>分类: 前端开发</span>
+            </div>
+            <div class="post-content-full">
+                <p>JavaScript作为前端开发的核心语言，每年都在不断进化。本文将介绍ES2022及以后版本中引入的一些重要新特性，以及如何在实际项目中应用这些特性来简化代码并提高性能。</p>
+
+                <h2>Top-Level Await</h2>
+                <p>在ES2022之前，await关键字只能在async函数内部使用。现在，你可以在模块的顶层直接使用await：</p>
+                <pre><code>// 以前需要这样写
+async function loadConfig() {
+  const config = await fetchConfig();
+  return config;
+}
+const config = await loadConfig();
+
+// 现在可以直接这样写
+const config = await fetchConfig();</code></pre>
+
+                <h2>Object.hasOwn()</h2>
+                <p>这是一个更安全、更直观的方式来检查对象是否拥有某个属性：</p>
+                <pre><code>// 旧方法
+Object.prototype.hasOwnProperty.call(obj, 'property');
+
+// 新方法
+Object.hasOwn(obj, 'property');</code></pre>
+
+                <h2>Error Cause</h2>
+                <p>现在可以更容易地在错误中包含导致错误的原始原因：</p>
+                <pre><code>try {
+  const response = await fetch('/api/data');
+  if (!response.ok) {
+    throw new Error('Failed to fetch data', { cause: response.statusText });
+  }
+} catch (error) {
+  console.error('Error:', error.message);
+  console.error('Caused by:', error.cause);
+}</code></pre>
+
+                <h2>结论</h2>
+                <p>JavaScript的新特性让我们的代码更加简洁和易读。虽然不是所有特性都会立即用到，但了解这些新功能有助于写出更现代化的JavaScript代码。</p>
+                
+                <div class="tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">ES2022</span>
+                    <span class="tag">前端开发</span>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 我的个人博客. 版权所有.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

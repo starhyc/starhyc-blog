@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章列表 - 我的个人博客</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="nav-logo">我的博客</h1>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">首页</a></li>
+                    <li class="nav-item"><a href="posts.html" class="nav-link">文章</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">关于</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container">
+            <h1>所有文章</h1>
+            
+            <div class="search-section">
+                <input type="text" id="search-input" placeholder="搜索文章..." class="search-input">
+            </div>
+            
+            <div class="posts-grid">
+                <article class="post-card">
+                    <img src="images/blog1.jpg" alt="JavaScript新特性探索" class="post-image">
+                    <div class="post-content">
+                        <h3><a href="post1.html">JavaScript新特性探索</a></h3>
+                        <p class="post-excerpt">探索JavaScript最新的特性和最佳实践，提升开发效率。本文将介绍ES2022及以后版本中引入的新功能，以及如何在实际项目中应用这些特性来简化代码并提高性能。</p>
+                        <div class="post-meta">
+                            <span class="post-date">2023-06-15</span>
+                            <span class="post-category">前端开发</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="post-card">
+                    <img src="images/blog2.jpg" alt="React性能优化技巧" class="post-image">
+                    <div class="post-content">
+                        <h3><a href="post2.html">React性能优化技巧</a></h3>
+                        <p class="post-excerpt">深入探讨React应用的性能优化策略，让你的应用更快。从组件优化到状态管理，从懒加载到代码分割，全面解析提升React应用性能的方法。</p>
+                        <div class="post-meta">
+                            <span class="post-date">2023-06-10</span>
+                            <span class="post-category">前端开发</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="post-card">
+                    <img src="images/blog3.jpg" alt="CSS Grid布局详解" class="post-image">
+                    <div class="post-content">
+                        <h3><a href="post3.html">CSS Grid布局详解</a></h3>
+                        <p class="post-excerpt">全面解析CSS Grid布局的强大功能，构建现代网页布局。Grid布局是目前最强大的二维布局系统，本文将从基础概念到高级技巧全面介绍。</p>
+                        <div class="post-meta">
+                            <span class="post-date">2023-06-05</span>
+                            <span class="post-category">前端开发</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="post-card">
+                    <img src="images/blog4.jpg" alt="Node.js最佳实践" class="post-image">
+                    <div class="post-content">
+                        <h3><a href="post4.html">Node.js最佳实践</a></h3>
+                        <p class="post-excerpt">构建高性能Node.js应用的最佳实践和注意事项。从错误处理到性能监控，从安全性到部署策略，涵盖Node.js开发中的关键要点。</p>
+                        <div class="post-meta">
+                            <span class="post-date">2023-05-28</span>
+                            <span class="post-category">后端开发</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="post-card">
+                    <img src="images/blog5.jpg" alt="数据库设计原则" class="post-image">
+                    <div class="post-content">
+                        <h3><a href="post5.html">数据库设计原则</a></h3>
+                        <p class="post-excerpt">数据库设计的核心原则和实际应用。从范式理论到索引优化，从关系建模到查询性能，深入探讨如何设计高效的数据库结构。</p>
+                        <div class="post-meta">
+                            <span class="post-date">2023-05-20</span>
+                            <span class="post-category">数据库</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="post-card">
+                    <img src="images/blog6.jpg" alt="API设计指南" class="post-image">
+                    <div class="post-content">
+                        <h3><a href="post6.html">RESTful API设计指南</a></h3>
+                        <p class="post-excerpt">构建可维护、可扩展的RESTful API设计准则。涵盖HTTP方法使用、状态码选择、URL设计、错误处理等关键方面。</p>
+                        <div class="post-meta">
+                            <span class="post-date">2023-05-15</span>
+                            <span class="post-category">后端开发</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="load-more">
+                <button onclick="loadMorePosts()" class="load-more-btn">加载更多</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 我的个人博客. 版权所有.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
